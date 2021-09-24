@@ -11,7 +11,7 @@ defmodule CalcTest do
   end
 
   test "função que retorna o somatório dos valores de 1 até n - desvio condicional indireto" do
-    assert Calc.somat(5) == 15
+    assert Calc.somat(5) == 16
   end
 
   test "função que retorna o fatorial de n - desvio condicional indireto" do
