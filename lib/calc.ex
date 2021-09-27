@@ -90,4 +90,44 @@ defmodule Calc do
   def fat3(0) do
     1
   end
+
+  def mult(x, y) do
+    if x == 0 || y == 0 do
+      0
+    else
+      x * y
+    end
+  end
+
+  def potencia_de_2(i) when i > 1 do
+    2 * potencia_de_2(i - 1)
+  end
+
+  def potencia_de_2(1) do
+    2
+  end
+
+  def hanoi(n) when n > 1 do
+    2 * hanoi(n - 1) + 1
+  end
+
+  def hanoi(0) do
+    0
+  end
+
+  def hanoi(1) do
+    1
+  end
+
+  def serie(n) when n > 1 do
+    3 * serie(n - 1) - 2
+  end
+
+  def serie(0) do
+    0
+  end
+
+  def serie(1) do
+    3
+  end
 end
