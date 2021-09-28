@@ -79,4 +79,29 @@ defmodule CalcTest do
     assert Calc.serie(1) == 3
     assert Calc.serie(4) == 55
   end
+
+  test "função que retorna o valor negativo do número digitado" do
+    assert Calc.negativo(5) == -5
+  end
+
+  test "função que verifica se os números são primos" do
+    assert Calc.coprimo(13, 27) == Verdadeiro
+    assert Calc.coprimo(13, 26) == Falso
+  end
+
+  # 19 - test "função que verifica se os números são primos" do
+  #   assert Calc.coprimo(13, 27) == Verdadeiro
+  #   assert Calc.coprimo(13, 26) == Falso
+  # end
+
+  test "função sinal que compara o valor de x e y" do
+    assert Calc.sinal(8, 3) == 1
+    assert Calc.sinal(2, 7) == -1
+    assert Calc.sinal(4, 4) == 0
+  end
+
+  test "função que retorna as horas, minutos e segundos em valor serial de tempo" do
+    assert Calc.hms_tempo(09, 32, 50) == 34370
+    assert Calc.hms_tempo(25, 32, 50) == :ok
+  end
 end

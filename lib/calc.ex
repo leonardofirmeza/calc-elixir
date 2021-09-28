@@ -130,4 +130,36 @@ defmodule Calc do
   def serie(1) do
     3
   end
+
+  def negativo(n) do
+    n - 2 * n
+  end
+
+  def coprimo(x, y) do
+    if (rem(x, 2) == 1 || rem(x, 3) == 1) && (rem(y, 2) == 1 || rem(y, 3) == 1) do
+      Verdadeiro
+    else
+      Falso
+    end
+  end
+
+  def sinal(x, y) do
+    if x > y do
+      1
+    else
+      if x < y do
+        -1
+      else
+        0
+      end
+    end
+  end
+
+  def hms_tempo(h, m, s) do
+    if h >= 0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59 do
+      h * 3600 + m * 60 + s
+    else
+      IO.puts("algum dado fornecido está incorreto")
+    end
+  end
 end
