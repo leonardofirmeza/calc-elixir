@@ -48,14 +48,6 @@ defmodule CalcTest do
     assert Calc.fat3(1) == 1
   end
 
-  # 11 - test "função que retorna o valor do produto do intervalo entre 2 valores - desvio condicional direto" do
-  #   assert Calc.intervp(1, 4) == 6
-  # end
-
-  # 12 - test "função que retorna o valor do produto do intervalo entre 2 valores - desvio condicional direto" do
-  #   assert Calc.intervp(1, 4) == 6
-  # end
-
   test "função que retorna o valor da multiplicação de x e y - desvio condicional direto" do
     assert Calc.mult(1, 0) == 0
     assert Calc.mult(0, 0) == 0
@@ -89,11 +81,6 @@ defmodule CalcTest do
     assert Calc.coprimo(13, 26) == Falso
   end
 
-  # 19 - test "função que verifica se os números são primos" do
-  #   assert Calc.coprimo(13, 27) == Verdadeiro
-  #   assert Calc.coprimo(13, 26) == Falso
-  # end
-
   test "função sinal que compara o valor de x e y" do
     assert Calc.sinal(8, 3) == 1
     assert Calc.sinal(2, 7) == -1
@@ -103,5 +90,20 @@ defmodule CalcTest do
   test "função que retorna as horas, minutos e segundos em valor serial de tempo" do
     assert Calc.hms_tempo(09, 32, 50) == 34370
     assert Calc.hms_tempo(25, 32, 50) == :ok
+  end
+
+  test "função que retorna o valor serial de tempo em horas, minutos e segundos" do
+    assert Calc.hms_tempo2(09, 32, 50) == 34370
+    assert Calc.hms_tempo2(25, 32, 50) == "algum dado fornecido está incorreto"
+  end
+
+  test "função que retorna verdadeiro se o resto da divisão é igual a 4" do
+    assert Calc.div84(32) == Verdadeiro
+    assert Calc.div84(36) != Falso
+  end
+
+  test "função que retorna verdadeiro se o resto da divisão de n por d for igual a 4" do
+    assert Calc.divx(32, 8) == Verdadeiro
+    assert Calc.divx(36, 8) != Falso
   end
 end

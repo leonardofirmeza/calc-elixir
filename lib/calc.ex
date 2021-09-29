@@ -162,4 +162,20 @@ defmodule Calc do
       IO.puts("algum dado fornecido está incorreto")
     end
   end
+
+  def div84(n) do
+    if div(n, 8) == 4 do
+      Verdadeiro
+    else
+      Falso
+    end
+  end
+
+  def divx(n, d) do
+    if div(n, d) == 4 do
+      Verdadeiro
+    else
+      Falso
+    end
+  end
 end
