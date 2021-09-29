@@ -92,11 +92,6 @@ defmodule CalcTest do
     assert Calc.hms_tempo(25, 32, 50) == :ok
   end
 
-  test "função que retorna o valor serial de tempo em horas, minutos e segundos" do
-    assert Calc.hms_tempo2(09, 32, 50) == 34370
-    assert Calc.hms_tempo2(25, 32, 50) == "algum dado fornecido está incorreto"
-  end
-
   test "função que retorna verdadeiro se o resto da divisão é igual a 4" do
     assert Calc.div84(32) == Verdadeiro
     assert Calc.div84(36) != Falso
